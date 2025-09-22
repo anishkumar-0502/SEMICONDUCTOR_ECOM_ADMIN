@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: semiconspace-com-admin
+    container_name: semiconspace-com-admin
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
